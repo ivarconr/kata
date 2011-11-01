@@ -63,5 +63,25 @@ public class WrapperTest {
 	public void shouldFail() {
 		assertNotSame("on\ne\ntwo", Wrapper.wrap("on\ne\rtwo", 3));
 	}
+
+    @Test
+	public void finalTest() {
+        String textToWrap =  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque elementum mattis. Donec sit amet risus sed turpis tempor laoreet a eget ligula. Aliquam tempor vehicula urna id posuere. Integer sed mi eu orci volutpat ullamcorper eu eget nibh. Integer eu erat metus, ut dignissim quam. Pellentesque eu erat eu neque commodo vulputate eu ac ligula. Donec ornare volutpat est, quis viverra neque consequat a. Duis magna odio, aliquet congue placerat non, posuere pellentesque mauris. Quisque pretium, massa non scelerisque feugiat, nisl lorem pretium diam, scelerisque gravida elit diam eget eros. Donec nisi mauris, rhoncus non varius sit amet, dapibus in diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum adipiscing, est non aliquet cursus, lorem justo auctor elit, vel cursus sem quam eu arcu. Sed a volutpat eros.";
+
+        String expected = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque\n" +
+                "elementum mattis. Donec sit amet risus sed turpis tempor laoreet a eget ligula.\n" +
+                "Aliquam tempor vehicula urna id posuere. Integer sed mi eu orci volutpat\n" +
+                "ullamcorper eu eget nibh. Integer eu erat metus, ut dignissim quam.\n" +
+                "Pellentesque eu erat eu neque commodo vulputate eu ac ligula. Donec ornare\n" +
+                "volutpat est, quis viverra neque consequat a. Duis magna odio, aliquet congue\n" +
+                "placerat non, posuere pellentesque mauris. Quisque pretium, massa non\n" +
+                "scelerisque feugiat, nisl lorem pretium diam, scelerisque gravida elit diam\n" +
+                "eget eros. Donec nisi mauris, rhoncus non varius sit amet, dapibus in diam.\n" +
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum adipiscing,\n" +
+                "est non aliquet cursus, lorem justo auctor elit, vel cursus sem quam eu arcu.\n" +
+                "Sed a volutpat eros.";
+
+		assertEquals(expected, Wrapper.wrap(textToWrap, 80));
+	}
 	
 }

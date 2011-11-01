@@ -1,7 +1,14 @@
-In this kata we shall implement WordWrapping 
+Introduction
+In this kata we shall implement WordWrapping. The task is explained here: 
+http://codingdojo.org/cgi-bin/wiki.pl?KataWordWrap
+
+Approach used to solve the task:
+We did TDD based on Randori Kata: http://codingdojo.org/cgi-bin/wiki.pl?RandoriKata
+
+
 
 How to wrap text in VIM (to create complex test-cases). 
-First: ":set textwidth=80"
-Then: "Visual select text to wrap (shift+v)"
-Wrap: In visual-selected press: "g" and then "q"
-Save: :wq!
+ - First: ":set textwidth=80"
+ - Then: "Visual select text to wrap (shift+v)"
+ - Wrap: In visual-selected press: "g" and then "q"
+ - Save: :wq!

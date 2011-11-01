@@ -1,0 +1,7 @@
+In this kata we shall implement WordWrapping 
+
+How to wrap text in VIM (to create complex test-cases). 
+First: ":set textwidth=80"
+Then: "Visual select text to wrap (shift+v)"
+Wrap: In visual-selected press: "g" and then "q"
+Save: :wq!
